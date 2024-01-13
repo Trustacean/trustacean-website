@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    height: 100dvh;
+    background-color: rgb(12, 12, 12);
+    /* background-image: url('../images/bg.webp'); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

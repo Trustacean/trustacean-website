@@ -1,0 +1,70 @@
+:root {
+    --border-color: rgba(77, 166, 255, 0.3);
+
+}
+
+
+.card {
+    border-color: var(--border-color);
+    border-style: solid;
+    transition: all 1s, transform 0.9s, box-shadow 3s;
+}
+
+.card-column {
+    position: absolute;
+    top: 15dvh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80dvw;
+    max-width: 800px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-width: 0.1dvh;
+}
+
+.card-column::after {
+    pointer-events: none;
+    animation: float-shadow 3s infinite alternate ease-in-out;
+    content: '';
+    position: absolute;
+    inset: -0.5rem -0.5rem -0.5rem -0.5rem;
+    opacity: 0;
+    transition: 3s;
+    filter: blur(12px);
+
+}
+
+.card-column:hover::after {
+    box-shadow: 0px 0px 0px 1rem rgb(128, 192, 255);
+}
+
+@keyframes float-shadow {
+    0% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: .6;
+    }
+}
+
+.card-banner {
+    height: 20dvh;
+    max-height: 200px;
+    min-height: 100px;
+}
+
+.card-body {
+    height: 50dvh;
+    max-height: 500px;
+    min-height: 250px;
+}
+
+.card,
+.card-banner,
+.card-body {
+    background-color: transparent;
+}
