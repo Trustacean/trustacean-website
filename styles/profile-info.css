@@ -64,7 +64,6 @@
     justify-content: center;
     object-fit: cover;
     object-position: top;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .profile-info__discord-username {
