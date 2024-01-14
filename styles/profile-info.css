@@ -43,7 +43,7 @@
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
-.profile-info__country {
+.profile-info__discord {
     margin-left: 140px;
     margin-bottom: 23px;
     display: flex;
@@ -57,7 +57,7 @@
 
 }
 
-.profile-info__flag {
+.profile-info__discord-logo {
     height: 22px;
     border-radius: 10%;
     border-width: 2px;
@@ -67,6 +67,6 @@
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
-.profile-info__country-name {
+.profile-info__discord-username {
     margin-left: 3px;
 }
