@@ -31,9 +31,9 @@
     border-style: solid;
     background-color: transparent;
     transition: all 0s, border-radius 1.5s, opacity 1.5s, filter 1.5s;
-    animation-name: rotation-slow;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-name: rotation-slow, initial-rotation;
+    animation-timing-function: linear, ease-out;
+    animation-iteration-count: infinite, 1;
     opacity: 0.3;
 }
 
@@ -53,8 +53,8 @@
     height: calc(var(--current-height)*100vh);
     border-color: transparent var(--clr-2) var(--clr-1) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
-    animation-duration: var(--animation-duration);
-    
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+
 }
 
 .rings:nth-of-type(2) {
@@ -65,7 +65,8 @@
     height: calc(var(--current-height)*100vh);
     border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+
 }
 
 .rings:nth-of-type(3) {
@@ -74,9 +75,9 @@
     --animation-duration: calc(60s*var(--current-height));
 
     height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160) ;
+    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
     border-width: var(--border-width) var(--border-width) 0 0;
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 .rings:nth-of-type(4) {
@@ -87,7 +88,7 @@
     height: calc(var(--current-height)*100vh);
     border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
     border-width: var(--border-width) 0 0 var(--border-width);
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 .rings:nth-of-type(5) {
@@ -98,7 +99,7 @@
     height: calc(var(--current-height)*100vh);
     border-color: transparent rgb(0, 75, 160) rgb(0, 75, 160) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 .rings:nth-of-type(6) {
@@ -109,7 +110,7 @@
     height: calc(var(--current-height)*100vh);
     border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 .rings:nth-of-type(7) {
@@ -118,9 +119,9 @@
     --animation-duration: calc(60s*var(--current-height));
 
     height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160) ;
+    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
     border-width: var(--border-width) var(--border-width) 0 0;
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 .rings:nth-of-type(8) {
@@ -131,7 +132,7 @@
     height: calc(var(--current-height)*100vh);
     border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
     border-width: var(--border-width) 0 0 var(--border-width);
-    animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
 }
 
 
@@ -145,12 +146,18 @@
     }
 }
 
-@keyframes rotate-fast {
+@keyframes initial-rotation {
     0% {
-        transform: rotate(0deg);
+        border-radius: 47%;
+        filter: hue-rotate(-50deg);
+        transform: rotate(200deg);
+        opacity: 0.8;
     }
 
     100% {
-        transform: rotate(360deg);
+        border-radius: 50%;
+        filter: hue-rotate(0deg);
+        transform: rotate(383deg);
+        opacity: 0.3;
     }
 }
