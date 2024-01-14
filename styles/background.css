@@ -54,6 +54,7 @@
     border-color: transparent var(--clr-2) var(--clr-1) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 
 }
 
@@ -66,7 +67,7 @@
     border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
-
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 .rings:nth-of-type(3) {
@@ -78,6 +79,7 @@
     border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
     border-width: var(--border-width) var(--border-width) 0 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 .rings:nth-of-type(4) {
@@ -89,6 +91,7 @@
     border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
     border-width: var(--border-width) 0 0 var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 .rings:nth-of-type(5) {
@@ -100,6 +103,8 @@
     border-color: transparent rgb(0, 75, 160) rgb(0, 75, 160) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
+
 }
 
 .rings:nth-of-type(6) {
@@ -111,6 +116,7 @@
     border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 .rings:nth-of-type(7) {
@@ -122,6 +128,7 @@
     border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
     border-width: var(--border-width) var(--border-width) 0 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 .rings:nth-of-type(8) {
@@ -133,6 +140,7 @@
     border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
     border-width: var(--border-width) 0 0 var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
+    animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
 
 
@@ -148,16 +156,14 @@
 
 @keyframes initial-rotation {
     0% {
-        border-radius: 47%;
-        filter: hue-rotate(-50deg);
-        transform: rotate(200deg);
+        filter: hue-rotate(-70deg);
+        transform: rotate(180deg);
         opacity: 0.8;
     }
 
     100% {
-        border-radius: 50%;
         filter: hue-rotate(0deg);
-        transform: rotate(383deg);
+        transform: rotate(360deg);
         opacity: 0.3;
     }
 }
