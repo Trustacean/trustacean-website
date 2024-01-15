@@ -7,6 +7,7 @@
     border-color: var(--border-color);
     border-style: solid;
     transition: all 1s, transform 2s, box-shadow 1s;
+    will-change: transform;
 }
 
 .card-column {
@@ -27,25 +28,25 @@
 .card-column::after {
     content: '';
     position: absolute;
-    inset: .2rem .2rem .2rem .2rem;
+    inset: 0 0 0 0;
     pointer-events: none;
-    animation: float-shadow 3s infinite alternate ease-in-out;
-    opacity: 0;
+    opacity: .1;
     transition: 3s;
     filter: blur(0.2rem);
-}
-
-.card-column:hover::after {
-    box-shadow: 0 0 0 0.5rem rgb(128, 192, 255);
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: rgb(128, 192, 255);
+    will-change: opacity;
+    animation: float-shadow 6s infinite alternate ease-in-out;
 }
 
 @keyframes float-shadow {
-    0% {
-        opacity: .2;
+    0%, 100% {
+        opacity: .1;
     }
 
-    100% {
-        opacity: .6;
+    50% {
+        opacity: .4;
     }
 }
 

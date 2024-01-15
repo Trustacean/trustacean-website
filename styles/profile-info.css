@@ -4,12 +4,8 @@
     vertical-align: top;
     height: 100px;
     width: 100%;
-    background-color: rgba(0, 55, 111,0.4);
+    background-color: transparent;
     transition: 2s ease-in 0.5s ;
-}
-
-.profile-info:hover {
-    background-color: rgba(0, 55, 111,0.8);
 }
 
 .profile-info__section {
@@ -28,10 +24,6 @@
     object-position: top;
     position: absolute;
     transition: 1.5s;
-}
-
-.profile-picture:hover {
-    box-shadow: 0px 4px 20px rgb(77, 166, 255);
 }
 
 .profile-info__name {
