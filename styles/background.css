@@ -6,20 +6,20 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     filter: blur(.15rem);
 }
 
 .circle {
     position: absolute;
-    height: 60dvh;
+    height: 60%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border-left: 4vh solid aquamarine;
+    border-left: 4svh solid aquamarine;
     background-color: rgb(4, 11, 12);
-    box-shadow: -2dvh 0 0 rgb(154, 234, 249);
+    box-shadow: -2svh 0 0 rgb(154, 234, 249);
     box-sizing: border-box;
     animation: rotation-slow 240s infinite linear;
 }
@@ -41,17 +41,15 @@
     --start-height: 0.7;
     --height-increment: 0.1;
     --clr-1: rgb(0, 75, 160);
-    --clr-2: white;
-    --grad: linear-gradient(0deg, var(--clr-1), var(--clr-2));
 }
 
 .rings:nth-of-type(1) {
     --current-height: calc(var(--start-height));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: transparent var(--clr-2) var(--clr-1) transparent;
+    height: calc(var(--current-height)*100svh);
+    border-color: transparent var(--clr-1) var(--clr-1) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -60,11 +58,11 @@
 
 .rings:nth-of-type(2) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*1));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
+    height: calc(var(--current-height)*100svh);
+    border-color: var(--clr-1) var(--clr-1) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -72,11 +70,11 @@
 
 .rings:nth-of-type(3) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*2));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
+    height: calc(var(--current-height)*100svh);
+    border-color: var(--clr-1) transparent transparent var(--clr-1);
     border-width: var(--border-width) var(--border-width) 0 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -84,11 +82,11 @@
 
 .rings:nth-of-type(4) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*3));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
+    height: calc(var(--current-height)*100svh);
+    border-color: transparent transparent var(--clr-1) var(--clr-1);
     border-width: var(--border-width) 0 0 var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -96,11 +94,11 @@
 
 .rings:nth-of-type(5) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*4));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: transparent rgb(0, 75, 160) rgb(0, 75, 160) transparent;
+    height: calc(var(--current-height)*100svh);
+    border-color: transparent var(--clr-1) var(--clr-1) transparent;
     border-width: 0 0 var(--border-width) var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -109,11 +107,11 @@
 
 .rings:nth-of-type(6) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*5));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) rgb(0, 75, 160) transparent transparent;
+    height: calc(var(--current-height)*100svh);
+    border-color: var(--clr-1) var(--clr-1) transparent transparent;
     border-width: 0 var(--border-width) var(--border-width) 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -121,11 +119,11 @@
 
 .rings:nth-of-type(7) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*6));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: rgb(0, 75, 160) transparent transparent rgb(0, 75, 160);
+    height: calc(var(--current-height)*100svh);
+    border-color: var(--clr-1) transparent transparent var(--clr-1);
     border-width: var(--border-width) var(--border-width) 0 0;
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
@@ -133,16 +131,15 @@
 
 .rings:nth-of-type(8) {
     --current-height: calc(var(--start-height) + (var(--height-increment)*7));
-    --border-width: calc(var(--current-height)*1vh);
+    --border-width: calc(var(--current-height)*1svh);
     --animation-duration: calc(60s*var(--current-height));
 
-    height: calc(var(--current-height)*100vh);
-    border-color: transparent transparent rgb(0, 75, 160) rgb(0, 75, 160);
+    height: calc(var(--current-height)*100svh);
+    border-color: transparent transparent var(--clr-1) var(--clr-1);
     border-width: var(--border-width) 0 0 var(--border-width);
     animation-duration: var(--animation-duration), calc(var(--animation-duration) / 15);
     animation-delay: calc(var(--animation-duration) / 15), 0s;
 }
-
 
 @keyframes rotation-slow {
     0% {
@@ -156,7 +153,7 @@
 
 @keyframes initial-rotation {
     0% {
-        filter: hue-rotate(-70deg);
+        filter: hue-rotate(-90deg);
         transform: rotate(180deg);
         opacity: 0.8;
     }
