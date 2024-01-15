@@ -16,23 +16,20 @@ window.onload = function () {
             var rings = document.querySelectorAll('[class^="ring"]');
 
             rings.forEach(function (ring, index) {
-                card.style.transition = 'transform 1.5s, box-shadow 1.5s';
-                ring.style.borderRadius = '47%';
+                ring.style.borderRadius = '49%';
                 ring.style.opacity = '0.8';
-                ring.style.filter = 'hue-rotate(-50deg)';
-                card.style.filter = 'hue-rotate(-25deg)';
+                ring.style.filter = 'hue-rotate(-40deg)';
+                ring.style.transform = 'rotate(20deg)'
 
                 setTimeout(function () {
                     ring.style.borderRadius = '50%';
                     ring.style.opacity = '0.3';
                     ring.style.filter = 'hue-rotate(0deg)';
-                    card.style.filter = 'hue-rotate(0deg)';
 
                     if (index === rings.length - 1) {
                         isAnimating = false;
                     }
                 }, 1500);
-                card.style.transition = 'transform 0.9s, box-shadow 0.9s';
             });
         });
     }, 6000);
@@ -47,13 +44,11 @@ window.onload = function () {
         let parallaxBoxShadow = `${parallaxX / 4}px ${parallaxY / 4}px 0px rgba(77, 166, 255, 0.7)`;
 
         if (card.matches(':hover')) {
-            card.style.transition = 'transform 2s, box-shadow 3s';
             card.style.transform = `scale(1.1)`;
         } else {
-            card.style.transition = 'transform 0.9s, box-shadow 0.9s';
-            profile.style.transform = `translate(${parallaxX / 3}px, ${parallaxY / 3}px)`;
             card.style.transform = `translate(${parallaxX}px, ${parallaxY}px)`;
         }
         card.style.boxShadow = parallaxBoxShadow;
+        // profile.style.transform = `translate(${parallaxX / 3}px, ${parallaxY / 3}px)`;
     };
 };
