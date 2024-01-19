@@ -2,11 +2,21 @@
     --border-color: rgba(77, 166, 255, 0.3);
 }
 
+@keyframes opacity-up {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .card {
     border-color: var(--border-color);
     border-style: solid;
     transition: all 1s, transform 2s, box-shadow 1s;
+    animation: opacity-up 2s;
     will-change: transform;
 }
 
